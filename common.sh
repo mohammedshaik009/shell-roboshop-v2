@@ -94,7 +94,7 @@ python_setup(){
     VALIDATE $? "installing dependencies"
 }
 systemd_setup(){
-    sed -i "s/DOMAIN_NAME_$domain_name/g" $SCRIPT_DIR/$name.service &>> $LOGS_FILE
+    sed -i "s/DOMAIN_NAME/$domain_name/g" $SCRIPT_DIR/$name.service &>> $LOGS_FILE
     VALIDATE $? "changing domain_name"
     
     cp "$SCRIPT_DIR/$name.service" /etc/systemd/system/$name.service &>> $LOGS_FILE
