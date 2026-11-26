@@ -17,4 +17,4 @@ VALIDATE $? "allow remote connections to all"
 systemctl restart redis &>> $LOGS_FILE
 VALIDATE $? "restarting redis"
 
-time_total
+total_time
