@@ -86,7 +86,7 @@ java_setup(){
     VALIDATE $? "moving shipping.jar file"
 }
 python_setup(){
-    dnf install python3.14 -y &>> $LOGS_FILE
+    dnf install python3.14 python3.14-pip -y &>> $LOGS_FILE
     VALIDATE $? "installing python"
 
     python3.14 -m venv /app/.venv &>> $LOGS_FILE
