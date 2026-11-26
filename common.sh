@@ -30,6 +30,7 @@ VALIDATE(){
         exit 1
     else
         echo -e "$TIMESTAMP [INFO] $2 is ...$G SUCCESS $Y" | tee -a $LOGS_FILE
+    fi
 }
 
 app_setup(){
