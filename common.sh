@@ -51,9 +51,9 @@ app_setup(){
     rm -rf /tmp/$name.zip &>> $LOGS_FILE
     VALIDATE $? "removing existing code"
 
-    curl -L -o /tmp/$name.zip https://raw.githubusercontent.com/daws-92s/roboshop-documentation/refs/heads/main/artifacts/$name-v4.zip
+    curl -L -o /tmp/$name.zip https://raw.githubusercontent.com/daws-92s/roboshop-documentation/refs/heads/main/artifacts/$name-v4.zip &>> $LOGS_FILE
     cd /app
-    unzip /tmp/$name.zip
+    unzip /tmp/$name.zip &>> $LOGS_FILE
     VALIDATE $? "download and extract the code"
 }
 nodejs_setup(){
