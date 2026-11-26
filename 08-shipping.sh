@@ -14,7 +14,7 @@ INDEX=$(mysql -h mysql.$domain_name -u root -pRoboShop@1 -sN -e "SELECT COUNT(*)
 if [ -z "$INDEX" ] || [ $INDEX -eq 0 ]; then
     mysql -h mysql.$domain_name -uroot -pRoboShop@1 < /app/db/master-data.sql &>> $LOGS_FILE         
     mysql -h mysql.$domain_name -uroot -pRoboShop@1 < /app/db/app-user.sql  &>> $LOGS_FILE
-    VALIDATE $? "Load Data"
+    VALIDATE $? "Loading Data"
 else
     echo -e "$TIMESTAMP [INFO] Data already loaded ...$Y SKIPPING $N"
 fi
