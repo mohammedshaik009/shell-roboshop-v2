@@ -30,4 +30,4 @@ VALIDATE $? "nginx configurations"
 systemctl restart nginx &>> $LOGS_FILE 
 VALIDATE $? "restarting nginx"
 
-time_total
+total_time
