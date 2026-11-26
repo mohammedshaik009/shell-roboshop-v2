@@ -74,7 +74,7 @@ java_setup(){
     VALIDATE $? "setting java 25 default to java 25 version"
 
     echo "export JAVA_HOME=$(dirname $(dirname $(readlink -f /usr/bin/java)))" > /etc/profile.d/java.sh
-    export /etc/profile.d/java.sh
+    source /etc/profile.d/java.sh
     echo "$JAVA_HOME"
     VALIDATE $? "setting up JAVA_HOME"
 
