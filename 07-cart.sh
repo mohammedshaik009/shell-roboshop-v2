@@ -1,0 +1,10 @@
+#!/bin/bash
+
+name=cart
+source ./common.sh
+check_root
+app_setup
+nodejs_setup
+systemd_setup
+app_restart
+total_time
